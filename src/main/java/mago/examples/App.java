@@ -28,6 +28,10 @@ public class App {
             // The wm files are located under the resources directory
             return new ModelAndView(model, "hello.vm");
         }, new VelocityTemplateEngine());
+
+        get("/json", (request, response) -> {
+            return new Person("Pepe");
+        }, new JSONTransformer());
     }
 
     public static class Person {
