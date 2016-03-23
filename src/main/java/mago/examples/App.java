@@ -22,7 +22,7 @@ public class App {
 
         get("/velocity", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("hello", "Velocity World");
+            model.put("hello", "Welcome");
             model.put("person", new Person("Foobar"));
 
             // The wm files are located under the resources directory
